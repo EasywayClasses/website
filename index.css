@@ -204,8 +204,8 @@
 }
 
 .featureBox {
-    height: 170px;
-    width: 150px;
+    height: 160px;
+    width: 130px;
     border-radius: 10px;
     /* background-color: rgb(89, 99, 212); */
     background: rgb(7, 2, 18);
@@ -229,7 +229,7 @@
     text-decoration: none;
     color: white;
     text-shadow: 1px 1px 2px white;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
 
 }
