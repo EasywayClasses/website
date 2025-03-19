@@ -1,0 +1,209 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: border-box;
+    box-sizing: border-box;
+    font-family:  sans-serif;
+}
+
+#logoImage{
+    height: 60px;
+    width: 60px;
+    /* margin-top: 20px; */
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.textDesign {
+    font-size: 50px;
+    text-align: center;
+/*     font-family: 'Times New Roman', Times, serif; */
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: underline;
+    bottom: 40px;
+}
+
+#navbar {
+    height: 80px;
+    width: 100%;
+    background: rgb(7, 2, 18);
+    background: linear-gradient(0deg, rgb(25, 6, 56) 0%, rgb(33, 24, 87) 72%, rgb(31, 31, 97) 96%, rgb(1, 1, 10) 98%, rgba(89, 99, 212, 0.01) 100%, rgba(252, 176, 69, 1) 100%);
+    /* background-color: rgb(89, 99, 212); */
+    display: flex;
+    justify-content: space-around;
+}
+.space{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navbar0 {
+    text-decoration: none;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    line-height: 50px;
+    font-size: 1.6em;
+    font-weight: 900;
+    text-shadow: .5px .5px rgb(63, 61, 61);
+    /* position: relative;
+    bottom:20px;
+    left:10px; */
+}
+
+.nava {
+    color: white;
+    font-family:  sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 10px;
+}
+.nava:hover{
+    transition: all 0.3s linear;
+    font-weight: 600;
+    padding:5px;
+    border:2px solid yellow;
+    border-radius:5px;
+}
+
+@media (max-width:950px) {
+    #navbar {
+        height: auto;
+        width: 100%;
+        /* background-color: rgb(89, 99, 212); */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: space-around;
+        align-content: space-around;
+    }
+}
+
+@media (max-width:500px) {
+    #navbar {
+        height: auto;
+        width: 100%;
+        /* background-color: rgb(89, 99, 212); */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: space-around;
+        align-content: space-around;
+    }
+}
+
+#subHeading{
+    height: 55pxpx;
+    width: 100%;
+    font-size: 30px;
+    line-height: 55px;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+
+#conatiner{
+    height: auto;
+    width: 600px;
+    background-color: rgb(2, 2, 11);
+    padding: 20px;
+    border:2px dotted white;
+    border-radius: 10px;
+    
+
+    
+}
+.video{
+    height: 315px;
+    width: 560px;
+    border: 2px solid white;
+}
+.notes{
+    height: 40px;
+    width: 100%;
+    /* background-color: rgb(73, 40, 157); */
+    background: rgb(7, 2, 18);
+    background: linear-gradient(0deg, rgb(25, 6, 56) 0%, rgb(33, 24, 87) 72%, rgb(31, 31, 97) 96%, rgb(1, 1, 10) 98%, rgba(89, 99, 212, 0.01) 100%, rgba(252, 176, 69, 1) 100%);
+    
+}
+
+.handleAnchor{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+@media (max-width:630px){
+    #conatiner{
+        height: auto;
+        width: auto;
+        
+    }
+    .video{
+        height: 180px;
+        width: 310px;
+    }
+    .notes{
+        height:35px;
+        width: 100%;
+    }
+    
+    .handleAnchor{
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        font-style: italic;
+        font-size: 20px;
+        line-height: 40px;
+        position: relative;
+        bottom:3px;
+    }
+    
+}
+
+
+footer {
+    height: 350px;
+    width: 100%;
+    /* background-color: rgb(89, 99, 212); */
+    background: rgb(7, 2, 18);
+    background: linear-gradient(0deg, rgb(25, 6, 56) 0%, rgb(33, 24, 87) 72%, rgb(31, 31, 97) 96%, rgb(14, 14, 59) 98%, rgba(89, 99, 212, 0.01) 100%, rgb(3, 5, 23) 100%);
+    font-size: 22px;
+    line-height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+@media(max-width:1040px) {
+    footer {
+        height: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media(max-width:250px){
+    *{
+        overflow:scroll;
+          
+    }
+}
