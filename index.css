@@ -145,14 +145,15 @@
 
 @media(max-width:480px) {
     #designPart {
-        height: 250px;
+        height: 230px;
         margin-top: 20px;
     }
 }
 
 @media(max-width:395px) {
     #designPart {
-        height: 250px;
+        height: 230px;
+        width: 300px;
     }
 
     #typingAnimation {
