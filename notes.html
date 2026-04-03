@@ -1,127 +1,347 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Notes</title>
-  <link rel="stylesheet" href="notes.css">
-</head>
-
-<body>
-   <header>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes — Easyway Classes 2.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="notes.css" />
+  </head>
+  <body>
+    <!-- ── HEADER ── -->
+    <header>
       <nav>
-         <div id="navbar">
-            <div class="space"> <img src="assest/easyway logo.jpg" id="logoImage"><a id="navbar0">Easyway Classes 2.0</a></div>
-            <!-- <div class="space"> <a href="Proftle.html" id="navbar1" class="nava">Your Profile</a></div> -->
-            <!-- <div class="space"><a href="Course.html" id="navbar2" class="nava">Your Course</a></div> -->
-            <div class="space"><a href="index.html" id="navbar2" class="nava">Home</a></div>
-            <div class="space"><a href="syllabus.html" id="navbar3" class="nava">Syllabus</a></div>
-            <div class="space"><a href="videoLecture.html" id="navbar4" class="nava">Lectures</a></div>
-            <div class="space"><a href="calculator.html" id="navbar5" class="nava">Calculator</a></div>
-            <!-- <div class="space"><a href="darkHomePage.html" id="navbar6" class="nava"><i class="fa-solid fa-moon"></i></a> </div> -->
-
-         </div>
+        <a class="logo" href="index.html">
+          <div class="logo-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="logo-text">Easyway<span> Classes</span> 2.0</div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="videoLecture.html">Lectures</a></li>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="notes.html" class="active">Notes</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+        </ul>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <i class="fa-solid fa-bars" id="menuIcon"></i>
+        </button>
       </nav>
-   </header>
-   <br>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html"
+          ><i class="fa-solid fa-house" style="color: var(--red)"></i> Home</a
+        >
+        <a href="videoLecture.html"
+          ><i class="fa-solid fa-play" style="color: var(--red)"></i> Video
+          Lectures</a
+        >
+        <a href="syllabus.html"
+          ><i class="fa-solid fa-book" style="color: var(--red)"></i>
+          Syllabus</a
+        >
+        <a href="notes.html"
+          ><i class="fa-solid fa-file-lines" style="color: var(--red)"></i>
+          Notes</a
+        >
+        <a href="calculator.html"
+          ><i class="fa-solid fa-calculator" style="color: var(--red)"></i>
+          Calculator</a
+        >
+      </div>
+    </header>
 
-   <div id="subHeading">
-    Python Programming
-   </div>
-<br>
+    <!-- ── PAGE HERO ── -->
+    <div class="page-hero">
+      <div class="page-hero-inner">
+        <div>
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <i class="fa-solid fa-chevron-right" style="font-size: 9px"></i>
+            <span>Notes</span>
+          </div>
+          <h1>Study Notes<br /><span>Python Programming</span></h1>
+          <div class="page-hero-meta">
+            <div class="meta-tag">
+              <i class="fa-solid fa-circle-dot"></i> 7 Note Sets
+            </div>
+            <div class="meta-tag">
+              <i class="fa-solid fa-circle-dot"></i> 5 Units Covered
+            </div>
+            <div class="meta-tag">
+              <i class="fa-solid fa-circle-dot"></i> Free Download
+            </div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="subject-badge">
+            <i class="fa-brands fa-python" style="margin-right: 6px"></i>Python
+            Programming
+          </div>
+          <div class="aktu-badge">AKTU B.Tech Curriculum</div>
+        </div>
+      </div>
+    </div>
 
-   <center>
-   <div id="conatiner">
-     <div>
-       <a href="https://drive.google.com/file/d/1-HoSrA9B9noj5Otd-yPVmf11pZF8jDUP/view?usp=drivesdk"><img id="video1" class="video" src="assest/unit1.jpg" alt="" ></a>
-     </div>
-    <a class="handleAnchor" href="https://drive.google.com/file/d/1-HoSrA9B9noj5Otd-yPVmf11pZF8jDUP/view?usp=drivesdk">
-        <div class="notes">Notes: Unit 1 (Oneshot)</div>
-    </a>
-    <hr>
-    <br>
-    <br>
-    <div>
-        <a href="https://drive.google.com/file/d/1-Rd5pw4ialH6qfC6Fv4eVm1Vu5kLmioZ/view?usp=drivesdk"><img id="video2" class="video" src="assest/unit2.jpg" allowfullscreen></a>
+    <!-- ── MAIN ── -->
+    <div class="main-wrap">
+      <!-- Filter Bar -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" onclick="filterNotes('all', this)">
+          <i class="fa-solid fa-border-all"></i> All Notes
+        </button>
+        <button class="filter-btn" onclick="filterNotes('unit', this)">
+          <i class="fa-solid fa-book-open"></i> Unit Notes
+        </button>
+        <button class="filter-btn" onclick="filterNotes('program', this)">
+          <i class="fa-solid fa-code"></i> Programs
+        </button>
       </div>
-     <a class="handleAnchor" href="https://drive.google.com/file/d/1-Rd5pw4ialH6qfC6Fv4eVm1Vu5kLmioZ/view?usp=drivesdk">
-         <div class="notes">Notes: Unit 2 (Oneshot)</div>
-     </a>
-     <hr>
-    <br>
-    <br>
-    <div>
-       <a href="https://drive.google.com/file/d/1-XzD6Z-ZG0wWHzXI5NWCgPdIuC539yHl/view?usp=drivesdk"><img id="video4" class="video" src="assest/important Part1.jpg"></a> 
+
+      <!-- Notes Grid -->
+      <div class="notes-grid" id="notesGrid"></div>
+
+      <!-- CTA Banner -->
+      <div class="cta-banner reveal">
+        <div>
+          <h3>
+            <i
+              class="fa-brands fa-youtube"
+              style="color: var(--red); margin-right: 8px"
+            ></i
+            >Want Video Explanations?
+          </h3>
+          <p>
+            Watch free concept lectures on our YouTube channel — cover every
+            unit in detail.
+          </p>
+        </div>
+        <a
+          href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+          class="cta-btn"
+          target="_blank"
+        >
+          <i class="fa-brands fa-youtube"></i> Watch Lectures Free
+        </a>
       </div>
-     <a class="handleAnchor" href="https://drive.google.com/file/d/1-XzD6Z-ZG0wWHzXI5NWCgPdIuC539yHl/view?usp=drivesdk">
-         <div class="notes">Notes: Python Program</div>
-     </a>
-     <hr>
-    <br>
-    <br>
-    <div>
-        <a href="https://drive.google.com/file/d/107XlkpnS8WoYlHG8vW2ddWp6MlTKSCFM/view?usp=drivesdk"><img id="video5" class="video" src="assest/unit3.jpg" ></iframe></a>
-      </div>
-     <a class="handleAnchor" href="https://drive.google.com/file/d/107XlkpnS8WoYlHG8vW2ddWp6MlTKSCFM/view?usp=drivesdk">
-         <div class="notes">Notes: Unit 3 (Oneshot)</div>
-     </a>
-     <hr>
-    <br>
-    <br>
-    <div>
-       <a href="https://drive.google.com/file/d/1-qyFAiEq7XSaGy4iAz7BEre1OR75TeoQ/view?usp=drivesdk"><img id="video6" class="video" src="assest/important Part2.jpg"></a>
-      </div>
-     <a class="handleAnchor" href="https://drive.google.com/file/d/1-qyFAiEq7XSaGy4iAz7BEre1OR75TeoQ/view?usp=drivesdk">
-         <div class="notes">Notes: Python Program (Part 2)</div>
-     </a>
-     <hr>
-    <br>
-    <br>
-    <div>
-       <a href="https://drive.google.com/file/d/1-W4q_ls0u6qyI6rhJGW0A_y19Lpq_6oR/view?usp=drivesdk"><img id="video7" class="video" src="assest/unit4.jpg"></a>
-      </div>
-     <a class="handleAnchor" href="https://drive.google.com/file/d/1-W4q_ls0u6qyI6rhJGW0A_y19Lpq_6oR/view?usp=drivesdk">
-         <div class="notes">Notes: Unit 4 (Oneshot)</div>
-     </a>
-     <hr>
-    <br>
-    <br>
-    <div>
-       <a href="https://drive.google.com/file/d/10sCLMBgjMWHrwDFUnlpKk0dMY5bmE_8Y/view?usp=drivesdk"><img id="video8" class="video" src="assest/unit5.jpg"></a>
-     <a class="handleAnchor" href="https://drive.google.com/file/d/10sCLMBgjMWHrwDFUnlpKk0dMY5bmE_8Y/view?usp=drivesdk">
-         <div class="notes">Notes: Unit 5 (OneShot)</div>
-     </a>
-     <hr>
-    <br>
-</center>
-    <br>
-<footer>
-    <div class="space"> <a id="navbar0">Easyway Classes <i class="fa-solid fa-graduation-cap"></i></a></div>
-    <div>
-       <br>
-       <ul>
-          <li>
-             <h3>MENU</h3>
-          </li>
-          <li>Demo Lecture</li>
-          <li>Syllabus</li>
-          <li>Contact Us</li>
-       </ul>
     </div>
-    <br>
-    <div>
-       <ul>
-          <li>
-             <h3>SERVICES</h3>
-          </li>
-          <li>Privacy Policy</li>
-          <li>Terms of use</li>
-          <li>Refund Policy</li>
-       </ul>
-    </div>
- </footer>
-</body>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">
+            <div class="footer-logo-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="footer-brand-name">Easyway Classes 2.0</div>
+          </div>
+          <p class="footer-tagline">
+            Your free, student-first learning platform for AKTU. Lectures,
+            notes, PYQs &amp; more — always free.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="videoLecture.html">Video Lectures</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Easyway Classes 2.0. Made with ❤️ for students.</p>
+        <div class="footer-socials">
+          <a
+            href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+            target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        const icon = document.getElementById("menuIcon");
+        menu.classList.toggle("open");
+        icon.className = menu.classList.contains("open")
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      }
+
+      function filterNotes(type, btn) {
+        document
+          .querySelectorAll(".filter-btn")
+          .forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        document.querySelectorAll(".note-card").forEach((card) => {
+          const match = type === "all" || card.dataset.type === type;
+          card.style.display = match ? "flex" : "none";
+        });
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting)
+              setTimeout(() => e.target.classList.add("visible"), i * 80);
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      const notesData = [
+        {
+          title: "Python Fundamentals — Unit 1 Oneshot",
+          desc: "Introduction to Python, data types, operators, input/output and control flow.",
+          link: "https://drive.google.com/file/d/1-HoSrA9B9noj5Otd-yPVmf11pZF8jDUP/view",
+          img: "assest/unit1.jpg",
+          unit: "Unit 1",
+          type: "unit",
+          class: "u1",
+          tag: "Oneshot",
+        },
+        {
+          title: "Functions & Strings — Unit 2 Oneshot",
+          desc: "User-defined functions, string methods, lists, tuples and dictionaries.",
+          link: "https://drive.google.com/file/d/1-Rd5pw4ialH6qfC6Fv4eVm1Vu5kLmioZ/view",
+          img: "assest/unit2.jpg",
+          unit: "Unit 2",
+          type: "unit",
+          class: "u2",
+          tag: "Oneshot",
+        },
+        {
+          title: "Python Programs — Important Part 1",
+          desc: "Exam-focused programs: patterns, arrays, sorting and searching.",
+          link: "https://drive.google.com/file/d/1-XzD6Z-ZG0wWHzXI5NWCgPdIuC539yHl/view",
+          img: "assest/important Part1.jpg",
+          unit: "Programs",
+          type: "program",
+          class: "special",
+          tag: "Important",
+        },
+        {
+          title: "OOP Concepts — Unit 3",
+          desc: "Classes, objects, inheritance, polymorphism.",
+          link: "https://drive.google.com/file/d/107XlkpnS8WoYlHG8vW2ddWp6MlTKSCFM/view",
+          img: "assest/unit3.jpg",
+          unit: "Unit 3",
+          type: "unit",
+          class: "u3",
+          tag: "Oneshot",
+        },
+        {
+          title: "Python Programs — Part 2",
+          desc: "Advanced programs: file handling, exception handling.",
+          link: "https://drive.google.com/file/d/1-qyFAiEq7XSaGy4iAz7BEre1OR75TeoQ/view",
+          img: "assest/important Part2.jpg",
+          unit: "Programs",
+          type: "program",
+          class: "special",
+          tag: "Part 2",
+        },
+        {
+          title: "File Handling — Unit 4",
+          desc: "File I/O, exceptions, modules.",
+          link: "https://drive.google.com/file/d/1-W4q_ls0u6qyI6rhJGW0A_y19Lpq_6oR/view",
+          img: "assest/unit4.jpg",
+          unit: "Unit 4",
+          type: "unit",
+          class: "u4",
+          tag: "Oneshot",
+        },
+        {
+          title: "GUI & Libraries — Unit 5",
+          desc: "Tkinter, NumPy, Matplotlib.",
+          link: "https://drive.google.com/file/d/10sCLMBgjMWHrwDFUnlpKk0dMY5bmE_8Y/view",
+          img: "assest/unit5.jpg",
+          unit: "Unit 5",
+          type: "unit",
+          class: "u5",
+          tag: "Oneshot",
+        },
+      ];
+
+      /* RENDER FUNCTION */
+      function renderNotes() {
+        const grid = document.getElementById("notesGrid");
+        grid.innerHTML = "";
+
+        notesData.forEach((note) => {
+          const card = document.createElement("a");
+          card.className = `note-card ${note.class} reveal`;
+          card.href = note.link;
+          card.target = "_blank";
+          card.dataset.type = note.type;
+
+          card.innerHTML = `
+      <div class="note-thumb">
+        <img src="${note.img}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="note-thumb-placeholder" style="display:none">
+          <div class="thumb-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        </div>
+
+        <div class="note-tag-row">
+          <div class="unit-tag">${note.unit}</div>
+          <div class="special-tag">${note.tag}</div>
+        </div>
+
+        <div class="note-overlay">
+          <div class="overlay-btn"><i class="fa-solid fa-eye"></i> Preview</div>
+        </div>
+      </div>
+
+      <div class="note-body">
+        <div class="note-title">${note.title}</div>
+        <div class="note-desc">${note.desc}</div>
+
+        <div class="note-footer">
+          <div class="note-type"><i class="fa-solid fa-file-pdf"></i> PDF Notes</div>
+          <div class="download-btn"><i class="fa-solid fa-download"></i> Download</div>
+        </div>
+      </div>
+    `;
+
+          grid.appendChild(card);
+        });
+
+        // reapply animation observer
+        document
+          .querySelectorAll(".reveal")
+          .forEach((el) => observer.observe(el));
+      }
+
+      /* LOAD */
+      renderNotes();
+    </script>
+  </body>
 </html>
