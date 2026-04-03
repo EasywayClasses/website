@@ -1,188 +1,432 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Easyway Classes2.0</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-   <link rel="stylesheet" href="index.css">
-</head>
-
-<body>
-   <header>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easyway Classes 2.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css"/>
+   
+  </head>
+  <body>
+    <!-- ── HEADER ── -->
+    <header>
       <nav>
-         <div id="navbar">
-            <div class="space"> <img src="assest/easyway logo.jpg" id="logoImage"><a id="navbar0">Easyway Classes 2.0</a></div>
-            <!-- <div class="space"> <a href="Proftle.html" id="navbar1" class="nava">Your Profile</a></div> -->
-            <!-- <div class="space"><a href="Course.html" id="navbar2" class="nava">Your Course</a></div> -->
-            <div class="space"><a href="videoLecture.html" id="navbar2" class="nava">Video Lecture</a></div>
-            <div class="space"><a href="syllabus.html" id="navbar3" class="nava">Syllabus</a></div>
-            <div class="space"><a href="notes.html" id="navbar4" class="nava">Notes</a></div>
-            <div class="space"><a href="calculator.html" id="navbar5" class="nava">Calculator</a></div>
-            <!-- <div class="space"><a href="darkHomePage.html" id="navbar6" class="nava"><i class="fa-solid fa-moon"></i></a> </div> -->
-
-         </div>
+        <a class="logo" href="#">
+          <div class="logo-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="logo-text">Easyway<span> Classes</span> 2.0</div>
+        </a>
+        <ul class="nav-links">
+          <li>
+            <a href="videoLecture.html"
+              ><i class="fa-solid fa-play" style="font-size: 11px"></i> Video
+              Lecture</a
+            >
+          </li>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="notes.html">Notes</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+              class="nav-yt"
+              target="_blank"
+              ><i class="fa-brands fa-youtube"></i> Subscribe</a
+            >
+          </li>
+        </ul>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <i class="fa-solid fa-bars" id="menuIcon"></i>
+        </button>
       </nav>
-   </header>
-   <br>
-   <main>
-      <section>
-         <br>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="videoLecture.html"
+          ><i class="fa-solid fa-play" style="color: var(--red)"></i> Video
+          Lecture</a
+        >
+        <a href="syllabus.html"
+          ><i class="fa-solid fa-book" style="color: var(--red)"></i>
+          Syllabus</a
+        >
+        <a href="notes.html"
+          ><i class="fa-solid fa-file-lines" style="color: var(--red)"></i>
+          Notes</a
+        >
+        <a href="calculator.html"
+          ><i class="fa-solid fa-calculator" style="color: var(--red)"></i>
+          Calculator</a
+        >
+        <a
+          href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+          target="_blank"
+          ><i class="fa-brands fa-youtube" style="color: var(--red)"></i>
+          Subscribe on YouTube</a
+        >
+      </div>
+    </header>
 
-         <div id="design1">
-            <div id="typingAnimation">
-
-               <h1 id="Easyway">Learn with <div id="box">
-                     <pre>Easyway Classes 2.0</pre>
-                  </div>
-               </h1>
-            </div>
-
+    <!-- ── HERO ── -->
+    <section>
+      <div class="hero">
+        <div>
+          <div class="hero-badge">
+            <div class="hero-badge-dot"></div>
+            Now on YouTube &mdash; Subscribe for Free!
+          </div>
+          <h1>Learn with <span class="highlight">Easyway Classes 2.0</span></h1>
+          <p>
+            Your complete study companion for AKTU. Watch free lectures,
+            download notes, check syllabus &amp; more — all in one place.
+          </p>
+          <div class="hero-cta">
+            <a
+              href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+              class="btn-primary"
+              target="_blank"
+            >
+              <i class="fa-brands fa-youtube"></i> Watch Free Lectures
+            </a>
+            <a href="notes.html" class="btn-secondary">
+              <i class="fa-solid fa-download"></i> Get Notes
+            </a>
+          </div>
+          <div class="hero-stats">
             <div>
-               <img id="designPart" src="assest/mainImage.png">
-               <!-- <img id="designPart" src="https://static.vecteezy.com/system/resources/previews/011/381/880/original/male-teacher-teaching-online-3d-character-illustration-png.png"> -->
-               <!-- <img id="designPart" src="Easyway header image.png"> -->
-               <!-- src="https://img.freepik.com/premium-vector/student-character-vector-people-with-books-backpacks_507816-667.jpg"> -->
-
+              <div class="hero-stat-num">30+</div>
+              <div class="hero-stat-label">Video Lectures</div>
             </div>
-         </div>
-      </section>
-      <div class="line"></div>
-      <section>
-         <div class="gap"></div>
-         <div>
-            <h1 class="textDesign">Features</h1>
-         </div>
-         <div class="gap"></div>
-         <div id="containerFeatureBox">
-
-            <a href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"  class="removeUnderline">
-               <div id="featureBox1" class="featureBox">Easyway Classes 2.0</div>
-            </a>
-            <a href="notes.html" class="removeUnderline">
-               <div id="featureBox2" class="featureBox">Notes</div>
-            </a>
-            <a href="syllabus.html"
-                class="removeUnderline">
-               <div id="featureBox3" class="featureBox">Syllabus</div>
-            </a>
-            <a href="PYQ.html" class="removeUnderline">
-               <div id="featureBox4" class="featureBox">PYQ</div>
-            </a>
-            <a href="calculator.html" class="removeUnderline">
-               <div id="featureBox5" class="featureBox">Calculator</div>
-            </a>
-            <a href="https://erp.aktu.ac.in/webpages/oneview/oneview.aspx" class="removeUnderline">
-               <div id="featureBox6" class="featureBox">AKTU Result</div>
-            </a>
-
-         </div>
-         <div class="gap"></div>
-      </section>
-
-      <div class="line"></div>
-      <div class="gap"></div>
-      <div id="boxContainer">
-         <div id="image1"> </div>
-            <div id="imageMid">
-                <img src="assest/easywayImage1.jpg" id="promoImage2">
+            <div>
+              <div class="hero-stat-num">Free</div>
+              <div class="hero-stat-label">All Content</div>
             </div>
-        <div id="image1"></div>
-         </div>
+            <div>
+              <div class="hero-stat-num">AKTU</div>
+              <div class="hero-stat-label">Curriculum Based</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <div class="hero-image-bg"></div>
+          <img
+            src="assest/studentGroup.png"
+            alt="Easyway Classes illustration"
+            onerror="this.style.display = 'none'"
+          />
+        </div>
       </div>
-      <div class="gap"></div>
-      </section>
+    </section>
 
-      <section>
-         <div class="line"></div>
-         <div class="gap"></div>
-         <div>
-            <h1 class="textDesign">How to study with Easyway Classes</h1>
-         </div>
+    <div class="divider"></div>
 
-         <div class="imgContainer">
-            <div id="firstStep"><img src="assest/image copy.png" height="500px" class="stepImg"></div>
-            <div class="step1">
-               <h1>First of all, watch the Lecture Video of Easyway Classes</h1>
+    <!-- ── FEATURES ── -->
+    <section>
+      <div class="section-wrap">
+        <div class="reveal">
+          <p class="section-label">
+            <i class="fa-solid fa-bolt"></i> Everything You Need
+          </p>
+          <h2 class="section-title">All Features in One Place</h2>
+          <p class="section-sub">
+            From video lectures to previous year questions, we've got your
+            entire exam prep covered.
+          </p>
+        </div>
+        <div class="features-grid reveal">
+          <a
+            href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+            class="feature-card"
+            target="_blank"
+          >
+            <div class="feature-icon fi-red">
+              <i class="fa-brands fa-youtube"></i>
             </div>
-         </div>
-         <div class="smallLine"></div>
-         <div class="imgContainer">
-            <div class="step1">
-               <h1>After that, you self study with the help of notes and PYQ</h1>
+            <div>
+              <h3>YouTube Channel</h3>
+              <p>Free video lectures for all subjects</p>
             </div>
-            <div><img src="assest/image.png" height="500px" class="stepImg"></div>
-         </div>
-         <div class="smallLine"></div>
-         <div class="imgContainer">
-            <div id="firstStep"><img src="assest/image2.png" height="500px" class="stepImg"></div>
-            <div class="step1">
-               <h1>At the end , you give test on the Easyway Classes and get the Certificate</h1>
+            <div class="feature-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
             </div>
-         </div>
-
-         <div class="gap"></div>
-      </section>
-      <div class="line"></div>
-      <div class="gap1"></div>
-      <div>
-         <h1 class="textDesign">Join Our Easyway Family</h1>
+          </a>
+          <a href="notes.html" class="feature-card">
+            <div class="feature-icon fi-blue">
+              <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <div>
+              <h3>Notes</h3>
+              <p>Download concise study notes</p>
+            </div>
+            <div class="feature-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+          <a href="syllabus.html" class="feature-card">
+            <div class="feature-icon fi-green">
+              <i class="fa-solid fa-list-check"></i>
+            </div>
+            <div>
+              <h3>Syllabus</h3>
+              <p>Complete AKTU unit-wise syllabus</p>
+            </div>
+            <div class="feature-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+          <a href="PYQ.html" class="feature-card">
+            <div class="feature-icon fi-orange">
+              <i class="fa-solid fa-scroll"></i>
+            </div>
+            <div>
+              <h3>PYQ Papers</h3>
+              <p>Previous year questions &amp; solutions</p>
+            </div>
+            <div class="feature-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+          <a href="calculator.html" class="feature-card">
+            <div class="feature-icon fi-purple">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <div>
+              <h3>Calculator</h3>
+              <p>All-in-one tool for multiple calculations</p>
+            </div>
+            <div class="feature-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+          <a
+            href="https://erp.aktu.ac.in/webpages/oneview/oneview.aspx"
+            class="feature-card"
+            target="_blank"
+          >
+            <div class="feature-icon fi-teal">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div>
+              <h3>AKTU Result</h3>
+              <p>Check your official results</p>
+            </div>
+            <div class="feature-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+        </div>
       </div>
-      <div class="gap1"></div>
-      <div id="iconContainer">
-         <div id="iconborder">
-            <div><a href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"><i id="icon"
-                     class="fa-brands fa-youtube" style="color: #fd1212;"></i>
-                  <h3>YouTube</h3>
-               </a></div>
-            <div><a href="#"><i id="icon" class="fa-brands fa-telegram" style="color: #1d62d7;"></i>
-                  <h3>Telegram</h3>
-               </a></div>
-            <div><a href="#"><i id="icon" class="fa-brands fa-linkedin-in"></i>
-                  <h3>Linkedin</h3>
-               </a></div>
-            <div><a href="#"><i id="icon" class="fa-brands fa-facebook" style="color: #6d9ae8;"></i>
-                  <h3>Facebook</h3>
-               </a></div>
-            <div><a href="#"><i id="icon" class="fa-brands fa-instagram" style="color: #d1239a;"></i>
-                  <h3>Instagram</h3>
-               </a></div>
-            <div><a href="calculator.html"><i id="icon" class="fa-solid fa-calculator" style="color: #5963d4;"></i>
-                  <h3>Calculator</h3>
-               </a></div>
-         </div>
-         <img id="designIcons" src="assest/image.png" alt="Cartoon image">
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ── HOW TO STUDY ── -->
+    <section class="steps-bg">
+      <div class="steps-wrap">
+        <div class="reveal">
+          <p class="section-label">
+            <i class="fa-solid fa-map"></i> Study Roadmap
+          </p>
+          <h2 class="section-title">How to Study with Easyway</h2>
+          <p class="section-sub">
+            Follow our 3-step proven method to ace your AKTU exams.
+          </p>
+        </div>
+        <div class="steps-grid reveal">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <div class="step-icon"><i class="fa-brands fa-youtube"></i></div>
+            <h3>Watch Lecture Videos</h3>
+            <p>
+              Start with concept-clearing video lectures on our YouTube channel.
+              Understand every topic before moving ahead.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <div class="step-icon"><i class="fa-solid fa-book-open"></i></div>
+            <h3>Self Study with Notes &amp; PYQ</h3>
+            <p>
+              Reinforce your learning with our concise notes and practice with
+              previous year question papers.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <div class="step-icon"><i class="fa-solid fa-trophy"></i></div>
+            <h3>Test &amp; Get Certified</h3>
+            <p>
+              Take practice tests on Easyway Classes and earn your certificate
+              to showcase your achievement.
+            </p>
+          </div>
+        </div>
       </div>
-   </main>
-      <footer>
-         <div class="space"> <a id="navbar0">Easyway Classes <i class="fa-solid fa-graduation-cap"></i></a></div>
-         <div>
-            <br>
-            <ul>
-               <li>
-                  <h3>MENU</h3>
-               </li>
-               <li>Demo Lecture</li>
-               <li>Syllabus</li>
-               <li>Contact Us</li>
-            </ul>
-         </div>
-         <br>
-         <div>
-            <ul>
-               <li>
-                  <h3>SERVICES</h3>
-               </li>
-               <li>Privacy Policy</li>
-               <li>Terms of use</li>
-               <li>Refund Policy</li>
-            </ul>
-         </div>
-      </footer>
+    </section>
 
-</body>
+    <!-- ── JOIN FAMILY ── -->
+    <section>
+      <div class="section-wrap">
+        <div class="reveal">
+          <p class="section-label">
+            <i class="fa-solid fa-heart"></i> Community
+          </p>
+          <h2 class="section-title">Join the Easyway Family</h2>
+          <p class="section-sub">
+            Connect with thousands of students. Stay updated with new content,
+            tips, and exam notifications.
+          </p>
+        </div>
+        <div class="social-grid reveal">
+          <a
+            href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+            class="social-card"
+            target="_blank"
+          >
+            <div class="social-icon social-yt">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="social-name">YouTube</div>
+            <div class="social-action">Watch &amp; Subscribe</div>
+          </a>
+          <a href="#" class="social-card">
+            <div class="social-icon social-tg">
+              <i class="fa-brands fa-telegram"></i>
+            </div>
+            <div class="social-name">Telegram</div>
+            <div class="social-action">Join Channel</div>
+          </a>
+          <a href="#" class="social-card">
+            <div class="social-icon social-li">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="social-name">LinkedIn</div>
+            <div class="social-action">Connect</div>
+          </a>
+          <a href="#" class="social-card">
+            <div class="social-icon social-fb">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div class="social-name">Facebook</div>
+            <div class="social-action">Like Page</div>
+          </a>
+          <a href="#" class="social-card">
+            <div class="social-icon social-ig">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="social-name">Instagram</div>
+            <div class="social-action">Follow Us</div>
+          </a>
+          <a href="calculator.html" class="social-card">
+            <div class="social-icon social-calc">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <div class="social-name">Calculator</div>
+            <div class="social-action">Calculate GPA</div>
+          </a>
+        </div>
 
+        <!-- YT BANNER -->
+        <div class="yt-banner reveal">
+          <div class="yt-banner-text">
+            <h2><i class="fa-brands fa-youtube"></i> We're on YouTube!</h2>
+            <p>
+              Free lectures, tricks &amp; tips for every AKTU subject. New
+              videos every week.
+            </p>
+          </div>
+          <a
+            href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+            class="yt-sub-btn"
+            target="_blank"
+          >
+            <i class="fa-brands fa-youtube"></i> Subscribe Now — It's Free
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">
+            <div class="footer-logo-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="footer-brand-name">Easyway Classes 2.0</div>
+          </div>
+          <p class="footer-tagline">
+            Your free, student-first learning platform for AKTU. Lectures,
+            notes, PYQs &amp; more — always free.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="videoLecture.html">Video Lecture</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="PYQ.html">PYQ Papers</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Easyway Classes 2.0. Made with ❤️ for students.</p>
+        <div class="footer-socials">
+          <a
+            href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+            target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        const icon = document.getElementById("menuIcon");
+        menu.classList.toggle("open");
+        icon.className = menu.classList.contains("open")
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              setTimeout(() => e.target.classList.add("visible"), i * 80);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
 </html>
