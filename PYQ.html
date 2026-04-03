@@ -1,75 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>PYQ</title>
-  <link rel="stylesheet" href="PYQ.css">
-</head>
-
-<body>
-   <header>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easyway Classes 2.0 | PYQ</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="PYQ.css" />
+  </head>
+  <body>
+    <header>
       <nav>
-         <div id="navbar">
-            <div class="space"> <img src="assest/easyway logo.jpg" id="logoImage"><a id="navbar0">Easyway Classes 2.0</a></div>
-            <!-- <div class="space"> <a href="Proftle.html" id="navbar1" class="nava">Your Profile</a></div> -->
-            <!-- <div class="space"><a href="Course.html" id="navbar2" class="nava">Your Course</a></div> -->
-            <div class="space"><a href="index.html" id="navbar2" class="nava">Home</a></div>
-            <div class="space"><a href="notes.html" id="navbar3" class="nava">Notes</a></div>
-            <div class="space"><a href="videoLecture.html" id="navbar4" class="nava">Lectures</a></div>
-            <div class="space"><a href="calculator.html" id="navbar5" class="nava">Calculator</a></div>
-            <!-- <div class="space"><a href="darkHomePage.html" id="navbar6" class="nava"><i class="fa-solid fa-moon"></i></a> </div> -->
+        <a class="logo" href="#">
+          <div class="logo-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="logo-text">Easyway<span> Classes</span> 2.0</div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="videoLecture.html"
+              ><i class="fa-solid fa-play" style="font-size: 11px"></i> Video
+              Lecture</a
+            >
+          </li>
 
-         </div>
+          <li><a href="notes.html">Notes</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+              class="nav-yt"
+              target="_blank"
+              ><i class="fa-brands fa-youtube"></i> Subscribe</a
+            >
+          </li>
+        </ul>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <i class="fa-solid fa-bars" id="menuIcon"></i>
+        </button>
       </nav>
-   </header>
-   <br>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html"
+          ><i class="fa-solid fa-house" style="color: var(--red)"></i> Home</a
+        >
+        <a href="videoLecture.html"
+          ><i class="fa-solid fa-play" style="color: var(--red)"></i> Video
+          Lecture</a
+        >
 
-   <div id="subHeading">
-    PYQ (AKTU)
-   </div>
-<br>
+        <a href="notes.html"
+          ><i class="fa-solid fa-file-lines" style="color: var(--red)"></i>
+          Notes</a
+        >
+        <a href="calculator.html"
+          ><i class="fa-solid fa-calculator" style="color: var(--red)"></i>
+          Calculator</a
+        >
+        <a
+          href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+          target="_blank"
+          ><i class="fa-brands fa-youtube" style="color: var(--red)"></i>
+          Subscribe on YouTube</a
+        >
+      </div>
+    </header>
 
-   <center>
-   <div id="conatiner">
-     <div>
-       <a href="https://drive.google.com/file/d/10K5cr7ywBbyYQDrK0cty10gIURU2mNyI/view?usp=drivesdk" ><img class="video" src="assest/python PYQ.jpg" alt=""></a>
-     </div>
-    <a class="handleAnchor" href="https://drive.google.com/file/d/10K5cr7ywBbyYQDrK0cty10gIURU2mNyI/view?usp=drivesdk">
-        <div class="notes">Python Prog.. (2023-24)</div>
-    </a>
-    <hr>
-    <br>
-  
-</center>
-    <br>
-<footer>
-    <div class="space"> <a id="navbar0">Easyway Classes <i class="fa-solid fa-graduation-cap"></i></a></div>
-    <div>
-       <br>
-       <ul>
-          <li>
-             <h3>MENU</h3>
-          </li>
-          <li>Demo Lecture</li>
-          <li>Syllabus</li>
-          <li>Contact Us</li>
-       </ul>
-    </div>
-    <br>
-    <div>
-       <ul>
-          <li>
-             <h3>SERVICES</h3>
-          </li>
-          <li>Privacy Policy</li>
-          <li>Terms of use</li>
-          <li>Refund Policy</li>
-       </ul>
-    </div>
- </footer>
-</body>
+    <main class="container">
+      <h1 id="subHeading">AKTU Previous Year Questions</h1>
+
+      <div class="grid-container">
+        <div class="card">
+          <img src="assest/python PYQ.jpg" alt="Python PYQ" />
+          <div class="card-content">
+            <h3>Python Programming</h3>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.9rem;
+                margin-top: 5px;
+              "
+            >
+              Complete Syllabus & PYQs
+            </p>
+            <a
+              href="https://drive.google.com/file/d/10Bq2pODBmoHa7KWjJELaiEPCnL8dpywg/view?usp=drivesdk"
+              class="btn-download"
+            >
+              <i class="fa-solid fa-file-pdf"></i> Download Syllabus
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      style="
+        background: rgb(6, 6, 6);
+        color: #adaaaa;
+        padding: 1.4rem;
+        text-align: center;
+        margin-top: 2rem;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      "
+    >
+      <p>&copy; 2026 Easyway Classes. Built for Engineers.</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        const icon = document.getElementById("menuIcon");
+        menu.classList.toggle("open");
+        icon.className = menu.classList.contains("open")
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      }
+    </script>
+  </body>
 </html>
