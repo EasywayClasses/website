@@ -1,71 +1,382 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easyway 2.0 | Pro Calculator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="logo" href="#">
+          <div class="logo-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="logo-text">Easyway<span> Classes</span> 2.0</div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="videoLecture.html"
+              ><i class="fa-solid fa-play" style="font-size: 11px"></i> Video
+              Lecture</a
+            >
+          </li>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="notes.html">Notes</a></li>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator (light)</title>
-  <link rel="stylesheet" href="calculator.css">
-</head>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+              class="nav-yt"
+              target="_blank"
+              ><i class="fa-brands fa-youtube"></i> Subscribe</a
+            >
+          </li>
+        </ul>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <i class="fa-solid fa-bars" id="menuIcon"></i>
+        </button>
+      </nav>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html"
+          ><i class="fa-solid fa-house" style="color: var(--red)"></i> Home</a
+        >
+        <a href="videoLecture.html"
+          ><i class="fa-solid fa-play" style="color: var(--red)"></i> Video
+          Lecture</a
+        >
+        <a href="syllabus.html"
+          ><i class="fa-solid fa-book" style="color: var(--red)"></i>
+          Syllabus</a
+        >
+        <a href="notes.html"
+          ><i class="fa-solid fa-file-lines" style="color: var(--red)"></i>
+          Notes</a
+        >
 
-<body>
-  <div id="easyway">
-    <center>
-      <h1>EASYWAY CLASSES</h1>
-    </center>
-  </div>
-  <hr>
-  <div id="container">
-    <div id="border">
-      <div id="calculatorBorder">
-        <input type="text" id="input1" readonly>
-        <div id="buttoncontainer">
-          <button class="button1" onclick="currentDisplay='';
-document.querySelector('#input1').value=currentDisplay;">C</button>
-          <button class="button1" onclick="currentDisplay+='1';
-    document.querySelector('#input1').value=currentDisplay;
-">1</button>
-          <button class="button1" onclick="currentDisplay+='2';
-document.querySelector('#input1').value=currentDisplay;"">2</button>
-<button class=" button1" onclick="currentDisplay+='+';
-document.querySelector('#input1').value=currentDisplay;">+</button>
-          <button class="button1" onclick="currentDisplay+='3';
-document.querySelector('#input1').value=currentDisplay;">3</button>
-          <button class="button1" onclick="currentDisplay+='4';
-document.querySelector('#input1').value=currentDisplay;">4</button>
-          <button class="button1" onclick="currentDisplay+='-';
-document.querySelector('#input1').value=currentDisplay;">-</button>
-          <button class="button1" onclick="currentDisplay+='5';
-document.querySelector('#input1').value=currentDisplay;">5</button>
-          <button class="button1" onclick="currentDisplay+='6';
-document.querySelector('#input1').value=currentDisplay;">6</button>
-          <button class="button1" onclick="currentDisplay+='*';
-document.querySelector('#input1').value=currentDisplay;">*</button>
-          <button class="button1" onclick="currentDisplay+='7';
-document.querySelector('#input1').value=currentDisplay;">7</button>
-          <button class="button1" onclick="currentDisplay+='8';
-document.querySelector('#input1').value=currentDisplay;">8</button>
-          <button class="button1" onclick="currentDisplay+='/';
-document.querySelector('#input1').value=currentDisplay;">/</button>
-          <button class="button1" onclick="currentDisplay=eval(currentDisplay);
-document.querySelector('#input1').value=currentDisplay;">=</button>
-          <button class="button1" onclick="currentDisplay+='9';
-document.querySelector('#input1').value=currentDisplay;">9</button>
-          <button class="button1" onclick="currentDisplay+='0';
-document.querySelector('#input1').value=currentDisplay;">0</button>
-          <button class="button1" onclick="currentDisplay+='.';
-document.querySelector('#input1').value=currentDisplay;">.</button>
+        <a
+          href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+          target="_blank"
+          ><i class="fa-brands fa-youtube" style="color: var(--red)"></i>
+          Subscribe on YouTube</a
+        >
+      </div>
+    </header>
+
+    <div class="main-container">
+      <div class="calc-card">
+        <div class="tabs">
+          <button class="tab-link active" onclick="switchTab(event, 'basic')">
+            STANDARD
+          </button>
+          <button class="tab-link" onclick="switchTab(event, 'scientific')">
+            SCIENTIFIC
+          </button>
+          <button class="tab-link" onclick="switchTab(event, 'converter')">
+            CONVERTER
+          </button>
+        </div>
+
+        <div class="display-screen">
+          <div id="equation"></div>
+          <input type="text" id="result" readonly value="0" />
+        </div>
+
+        <div id="basic" class="pad-content active">
+          <div class="grid-layout">
+            <button class="key op" onclick="clearDisplay()">AC</button>
+            <button class="key op" onclick="deleteChar()">DEL</button>
+            <button class="key op" onclick="press('/')">÷</button>
+            <button class="key op" onclick="press('*')">×</button>
+            <button class="key" onclick="press('7')">7</button>
+            <button class="key" onclick="press('8')">8</button>
+            <button class="key" onclick="press('9')">9</button>
+            <button class="key op" onclick="press('-')">−</button>
+            <button class="key" onclick="press('4')">4</button>
+            <button class="key" onclick="press('5')">5</button>
+            <button class="key" onclick="press('6')">6</button>
+            <button class="key op" onclick="press('+')">+</button>
+            <button class="key" onclick="press('1')">1</button>
+            <button class="key" onclick="press('2')">2</button>
+            <button class="key" onclick="press('3')">3</button>
+            <button
+              class="key action"
+              style="grid-row: span 2"
+              onclick="solve()"
+            >
+              =
+            </button>
+            <button
+              class="key"
+              style="grid-column: span 2"
+              onclick="press('0')"
+            >
+              0
+            </button>
+            <button class="key" onclick="press('.')">.</button>
+          </div>
+        </div>
+
+        <div id="scientific" class="pad-content">
+          <div class="mode-toggle">
+            <div
+              id="degBtn"
+              class="toggle-btn active"
+              onclick="setAngleMode('deg')"
+            >
+              DEG
+            </div>
+            <div id="radBtn" class="toggle-btn" onclick="setAngleMode('rad')">
+              RAD
+            </div>
+          </div>
+          <div class="grid-layout sci-grid">
+            <button class="key op" onclick="sciFunc('sin')">sin</button>
+            <button class="key op" onclick="sciFunc('cos')">cos</button>
+            <button class="key op" onclick="sciFunc('tan')">tan</button>
+            <button class="key op" onclick="sciFunc('sqrt')">√</button>
+            <button class="key op" onclick="clearDisplay()">AC</button>
+
+            <button class="key" onclick="press('7')">7</button>
+            <button class="key" onclick="press('8')">8</button>
+            <button class="key" onclick="press('9')">9</button>
+            <button class="key op" onclick="press('/')">÷</button>
+            <button class="key op" onclick="deleteChar()">DEL</button>
+
+            <button class="key" onclick="press('4')">4</button>
+            <button class="key" onclick="press('5')">5</button>
+            <button class="key" onclick="press('6')">6</button>
+            <button class="key op" onclick="press('*')">×</button>
+            <button class="key op" onclick="sciFunc('log')">log</button>
+
+            <button class="key" onclick="press('1')">1</button>
+            <button class="key" onclick="press('2')">2</button>
+            <button class="key" onclick="press('3')">3</button>
+            <button class="key op" onclick="press('-')">−</button>
+            <button class="key op" onclick="sciFunc('pow')">x²</button>
+
+            <button class="key" onclick="press('0')">0</button>
+            <button class="key" onclick="press('.')">.</button>
+            <button class="key op" onclick="press('3.14159')">π</button>
+            <button class="key op" onclick="press('+')">+</button>
+            <button class="key action" onclick="solve()">=</button>
+          </div>
+        </div>
+
+        <div id="converter" class="pad-content">
+          <div class="conv-wrap">
+            <select
+              id="unitCategory"
+              class="select-box"
+              onchange="updateUnits()"
+            >
+              <option value="length">Length (m, km, mile)</option>
+              <option value="weight">Weight (kg, g, lb)</option>
+              <option value="temp">Temperature (C, F, K)</option>
+              <option value="number">Number Base (Bin, Hex, Oct)</option>
+            </select>
+
+            <div class="input-row">
+              <input
+                type="text"
+                id="unitInput"
+                class="conv-input"
+                placeholder="Value"
+                oninput="performConversion()"
+              />
+              <select
+                id="fromUnit"
+                class="select-box"
+                onchange="performConversion()"
+              ></select>
+            </div>
+            <div style="text-align: center; color: var(--primary-red)">
+              <i class="fa-solid fa-arrow-down"></i>
+            </div>
+            <div class="input-row">
+              <input
+                type="text"
+                id="unitOutput"
+                class="conv-input"
+                placeholder="Result"
+                readonly
+              />
+              <select
+                id="toUnit"
+                class="select-box"
+                onchange="performConversion()"
+              ></select>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <script>
-    let currentDisplay = '';
-    document.querySelector('#input1').value = currentDisplay;
-  </script>
-</body>
+    <footer
+      style="
+        background: rgb(6, 6, 6);
+        color: #adaaaa;
+        width: 100%;
+        padding: 1.4rem;
+        text-align: center;
+        margin-top: 2rem;
+        position: absolute;
+        bottom: 0;
+      "
+    >
+      <p>&copy; 2026 Easyway Classes. Built for Engineers.</p>
+    </footer>
 
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        const icon = document.getElementById("menuIcon");
+        menu.classList.toggle("open");
+        icon.className = menu.classList.contains("open")
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      }
+
+      let currentInput = "0";
+      let angleMode = "deg";
+      const display = document.getElementById("result");
+      const eqDisplay = document.getElementById("equation");
+
+      function switchTab(evt, modeName) {
+        document
+          .querySelectorAll(".pad-content")
+          .forEach((c) => c.classList.remove("active"));
+        document
+          .querySelectorAll(".tab-link")
+          .forEach((t) => t.classList.remove("active"));
+        document.getElementById(modeName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+        if (modeName === "converter") updateUnits();
+      }
+
+      function setAngleMode(mode) {
+        angleMode = mode;
+        document
+          .getElementById("degBtn")
+          .classList.toggle("active", mode === "deg");
+        document
+          .getElementById("radBtn")
+          .classList.toggle("active", mode === "rad");
+      }
+
+      function press(val) {
+        if (currentInput === "0" && val !== ".") currentInput = val;
+        else currentInput += val;
+        display.value = currentInput;
+      }
+
+      function clearDisplay() {
+        currentInput = "0";
+        eqDisplay.innerText = "";
+        display.value = "0";
+      }
+
+      function deleteChar() {
+        currentInput =
+          currentInput.length > 1 ? currentInput.slice(0, -1) : "0";
+        display.value = currentInput;
+      }
+
+      function solve() {
+        try {
+          eqDisplay.innerText = currentInput + " =";
+          currentInput = eval(currentInput).toString();
+          display.value = currentInput;
+        } catch {
+          display.value = "Error";
+          currentInput = "0";
+        }
+      }
+
+      function sciFunc(type) {
+        let val = parseFloat(currentInput);
+        let rad = angleMode === "deg" ? val * (Math.PI / 180) : val;
+        switch (type) {
+          case "sin":
+            currentInput = Math.sin(rad).toFixed(4);
+            break;
+          case "cos":
+            currentInput = Math.cos(rad).toFixed(4);
+            break;
+          case "tan":
+            currentInput = Math.tan(rad).toFixed(4);
+            break;
+          case "sqrt":
+            currentInput = Math.sqrt(val).toFixed(4);
+            break;
+          case "log":
+            currentInput = Math.log10(val).toFixed(4);
+            break;
+          case "pow":
+            currentInput = Math.pow(val, 2).toString();
+            break;
+        }
+        display.value = currentInput;
+      }
+
+      // --- CONVERTER LOGIC ---
+      const units = {
+        length: { Meters: 1, Kilometers: 0.001, Miles: 0.000621, Feet: 3.28 },
+        weight: { Kilograms: 1, Grams: 1000, Pounds: 2.204 },
+        temp: { Celsius: "c", Fahrenheit: "f", Kelvin: "k" },
+        number: { Decimal: 10, Binary: 2, Octal: 8, Hex: 16 },
+      };
+
+      function updateUnits() {
+        const cat = document.getElementById("unitCategory").value;
+        const from = document.getElementById("fromUnit");
+        const to = document.getElementById("toUnit");
+        from.innerHTML = to.innerHTML = "";
+        Object.keys(units[cat]).forEach((u) => {
+          from.add(new Option(u, units[cat][u]));
+          to.add(new Option(u, units[cat][u]));
+        });
+        to.selectedIndex = 1;
+      }
+
+      function performConversion() {
+        const cat = document.getElementById("unitCategory").value;
+        const val = document.getElementById("unitInput").value;
+        const from = document.getElementById("fromUnit").value;
+        const to = document.getElementById("toUnit").value;
+        const out = document.getElementById("unitOutput");
+
+        if (!val) {
+          out.value = "";
+          return;
+        }
+
+        if (cat === "temp") {
+          let c;
+          if (from === "c") c = val;
+          else if (from === "f") c = ((val - 32) * 5) / 9;
+          else c = val - 273.15;
+
+          if (to === "c") out.value = parseFloat(c).toFixed(2);
+          else if (to === "f") out.value = ((c * 9) / 5 + 32).toFixed(2);
+          else out.value = (parseFloat(c) + 273.15).toFixed(2);
+        } else if (cat === "number") {
+          let dec = parseInt(val, from);
+          out.value = isNaN(dec) ? "Error" : dec.toString(to).toUpperCase();
+        } else {
+          let base = val / from;
+          out.value = (base * to).toFixed(4);
+        }
+      }
+    </script>
+  </body>
 </html>
-
