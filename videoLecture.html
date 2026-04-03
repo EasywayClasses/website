@@ -1,87 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Lectures and Notes</title>
-  <link rel="stylesheet" href="videoLecture.css">
-</head>
-
-<body>
-   <header>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Course | Easyway Classes</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="videoLecture.css" />
+  </head>
+  <body>
+    <header>
       <nav>
-         <div id="navbar">
-            <div class="space"> <img src="assest/easyway logo.jpg" id="logoImage"><a id="navbar0">Easyway Classes 2.0</a></div>
-            <!-- <div class="space"> <a href="Proftle.html" id="navbar1" class="nava">Your Profile</a></div> -->
-            <!-- <div class="space"><a href="Course.html" id="navbar2" class="nava">Your Course</a></div> -->
-            <div class="space"><a href="index.html" id="navbar2" class="nava">Home</a></div>
-            <div class="space"><a href="syllabus.html" id="navbar3" class="nava">Syllabus</a></div>
-            <div class="space"><a href="notes.html" id="navbar4" class="nava">Notes</a></div>
-            <div class="space"><a href="calculator.html" id="navbar5" class="nava">Calculator</a></div>
-            <!-- <div class="space"><a href="darkHomePage.html" id="navbar6" class="nava"><i class="fa-solid fa-moon"></i></a> </div> -->
-
-         </div>
+        <a class="logo" href="#">
+          <div class="logo-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="logo-text">Easyway<span> Classes</span> 2.0</div>
+        </a>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html"
+              ><i class="fa-solid fa-house" style="font-size: 11px"></i> Home
+            </a>
+          </li>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="notes.html">Notes</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+              class="nav-yt"
+              target="_blank"
+              ><i class="fa-brands fa-youtube"></i> Subscribe</a
+            >
+          </li>
+        </ul>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <i class="fa-solid fa-bars" id="menuIcon"></i>
+        </button>
       </nav>
-   </header>
-   <br>
-
-   <div id="subHeading">
-    Python Programming
-   </div>
-<br>
-
-   <center>
-   <div id="conatiner">
-     <div>
-       <iframe id="video1" class="video" src="https://www.youtube.com/embed/yM73aspXna0?si=r_0Wfuh03hq3nJMp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-     </div>
-    <a class="handleAnchor" href="https://drive.google.com/file/d/1-HoSrA9B9noj5Otd-yPVmf11pZF8jDUP/view?usp=drivesdk">
-        <div class="notes">Notes: Unit 1 (Part 1)</div>
-    </a>
-    <hr>
-    <br>
-    <br>
-    <div>
-        <iframe id="video2" class="video" src="https://www.youtube.com/embed/T1EJWkIJMRg?si=GI_gWhfLFmSbblL7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html"
+          ><i class="fa-solid fa-house" style="color: var(--red)"></i> Home
+        </a>
+        <a href="syllabus.html"
+          ><i class="fa-solid fa-book" style="color: var(--red)"></i>
+          Syllabus</a
+        >
+        <a href="notes.html"
+          ><i class="fa-solid fa-file-lines" style="color: var(--red)"></i>
+          Notes</a
+        >
+        <a href="calculator.html"
+          ><i class="fa-solid fa-calculator" style="color: var(--red)"></i>
+          Calculator</a
+        >
+        <a
+          href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+          target="_blank"
+          ><i class="fa-brands fa-youtube" style="color: var(--red)"></i>
+          Subscribe on YouTube</a
+        >
       </div>
-     <a class="handleAnchor" href="https://drive.google.com/file/d/1-HoSrA9B9noj5Otd-yPVmf11pZF8jDUP/view?usp=drivesdk">
-         <div class="notes">Notes: Unit 1 (Part 2)</div>
-     </a>
-     <hr>
-    <br>
-    <br>
-    
-</center>
-    <br>
-<footer>
-    <div class="space"> <a id="navbar0">Easyway Classes <i class="fa-solid fa-graduation-cap"></i></a></div>
-    <div>
-       <br>
-       <ul>
-          <li>
-             <h3>MENU</h3>
-          </li>
-          <li>Demo Lecture</li>
-          <li>Syllabus</li>
-          <li>Contact Us</li>
-       </ul>
+    </header>
+
+    <section class="channel-header">
+      <h1>Python Programming Mastery</h1>
+      <p style="color: #666; margin-top: 10px">
+        Master Python from basics to advanced with AKTU specific notes.
+      </p>
+
+      <div class="action-buttons">
+        <a
+          href="https://www.youtube.com/channel/UCbWRWx4auJqjwvc4wWApX0w"
+          target="_blank"
+          class="btn btn-red"
+        >
+          <i class="fab fa-youtube"></i> Visit Channel
+        </a>
+        <a
+          href="https://youtube.com/playlist?list=PLuMXQARQLlGG2zgB_N6-heiKRjrtF8u6Z&si=LFUqPoVAG-k9T1ir"
+          target="_blank"
+          class="btn btn-outline"
+        >
+          <i class="fas fa-list"></i> Full Playlist
+        </a>
+      </div>
+    </section>
+
+    <div class="main-layout">
+      <main class="lectures-container">
+        <h2 style="margin-bottom: 10px">Course Content</h2>
+
+        <div class="lecture-card">
+          <div class="video-thumb">
+            <iframe
+              src="https://www.youtube.com/embed/yM73aspXna0"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="lecture-info">
+            <h3>01. Python Introduction</h3>
+            <p style="font-size: 0.85rem; color: #777">
+              Unit 1 - Part 1: Introduction and Basic Syntax
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1-HoSrA9B9noj5Otd-yPVmf11pZF8jDUP/view"
+              class="notes-link"
+              ><i class="fas fa-file-pdf"></i> Download Unit 1 Notes</a
+            >
+          </div>
+        </div>
+
+        <div class="lecture-card">
+          <div class="video-thumb">
+            <iframe
+              src="https://www.youtube.com/embed/T1EJWkIJMRg"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="lecture-info">
+            <h3>02. Variables & Data Types</h3>
+            <p style="font-size: 0.85rem; color: #777">
+              Unit 1 - Part 2: Working with data in Python
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1-Rd5pw4ialH6qfC6Fv4eVm1Vu5kLmioZ/view"
+              class="notes-link"
+              ><i class="fas fa-file-pdf"></i> Download Unit 1 Notes</a
+            >
+          </div>
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <div class="info-box">
+          <h4 style="color: var(--primary-red); margin-bottom: 10px">
+            About this Course
+          </h4>
+          <p style="font-size: 0.9rem">
+            Specifically designed for AKTU students. Includes Previous Year
+            Questions (PYQs) and hand-written notes.
+          </p>
+        </div>
+        <div class="info-box" style="background: #1d3557; color: white">
+          <h4>Join Community</h4>
+          <p style="font-size: 0.85rem; margin: 10px 0">
+            Get updates on Telegram or WhatsApp.
+          </p>
+          <a
+            href="#"
+            style="color: #e63946; font-weight: 600; text-decoration: none"
+            >Join Now →</a
+          >
+        </div>
+      </aside>
     </div>
-    <br>
-    <div>
-       <ul>
-          <li>
-             <h3>SERVICES</h3>
-          </li>
-          <li>Privacy Policy</li>
-          <li>Terms of use</li>
-          <li>Refund Policy</li>
-       </ul>
-    </div>
- </footer>
-</body>
+
+    <footer
+      style="
+        background: rgb(6, 6, 6);
+        color: #adaaaa;
+        padding: 1.4rem;
+        text-align: center;
+        margin-top: 2rem;
+      "
+    >
+      <p>&copy; 2026 Easyway Classes. Built for Engineers.</p>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        const icon = document.getElementById("menuIcon");
+        menu.classList.toggle("open");
+        icon.className = menu.classList.contains("open")
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      }
+    </script>
+  </body>
 </html>
-
-
